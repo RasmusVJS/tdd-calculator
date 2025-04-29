@@ -7,7 +7,7 @@ public class CalculatorTest {
     @Test
     public void test() {
         Calculator calculator = new Calculator();
-        Assertions.assertEquals(calculator.add(1,2), 3);
+        Assertions.assertEquals(calculator.add(1, 2), 3);
     }
 
     @Test
@@ -26,5 +26,17 @@ public class CalculatorTest {
     public void test4() {
         Calculator calculator = new Calculator();
         Assertions.assertEquals(calculator.divide(6,3), 2);
+    }
+
+    @Test
+    public void test5() {
+        Calculator calculator = new Calculator();
+        Assertions.assertEquals(calculator.add("1,2,3"), 6);
+    }
+
+    @Test
+    public void test6() {
+        Calculator calculator = new Calculator();
+        Assertions.assertEquals(calculator.add(new int[]{1,2,3}), 6);
     }
 }
